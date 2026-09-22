@@ -27,11 +27,11 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-dark-950 border-t border-dark-700/80 pt-16 pb-12 px-4 sm:px-6">
+    <footer className="relative bg-dark-950 border-t border-omen-900/80 pt-16 pb-12 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-8">
         {/* Brand Monogram & Name */}
         <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 rounded bg-dark-900 border border-zinc-700 flex items-center justify-center">
+          <div className="w-10 h-10 rounded bg-dark-900 border border-omen-700/60 flex items-center justify-center shadow-omen-glow">
             <svg
               width="22"
               height="22"
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M14 16 L28 48 L35 48 L22 16 Z" fill="#FFFFFF" />
-              <path d="M50 16 L33 48 L27 48 L42 16 Z" fill="#94A3B8" />
+              <path d="M50 16 L33 48 L27 48 L42 16 Z" fill="#8B5CF6" />
             </svg>
           </div>
 
@@ -48,8 +48,8 @@ export const Footer: React.FC = () => {
             <h3 className="text-xl font-black text-white tracking-[0.25em] uppercase font-mono">
               {siteConfig.name}
             </h3>
-            <p className="text-xs font-mono text-zinc-400 tracking-wider uppercase mt-1">
-              Streamer • Editor • Motion Designer • Designer
+            <p className="text-xs font-mono text-omen-300 tracking-wider uppercase mt-1">
+              Streamer • Video Editor • Motion Designer • Designer
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.label}
-              className="w-9 h-9 rounded bg-dark-900 border border-dark-700 hover:border-zinc-500 flex items-center justify-center text-zinc-400 hover:text-white transition-all hover:scale-105"
+              className="w-9 h-9 rounded bg-dark-900 border border-omen-800/80 hover:border-omen-400 hover:text-white flex items-center justify-center text-dark-300 transition-all hover:scale-105"
             >
               {item.icon}
             </a>
@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
             <a
               href={`mailto:${siteConfig.contactEmail}`}
               aria-label="Enviar E-mail"
-              className="w-9 h-9 rounded bg-dark-900 border border-dark-700 hover:border-zinc-500 flex items-center justify-center text-zinc-400 hover:text-white transition-all hover:scale-105"
+              className="w-9 h-9 rounded bg-dark-900 border border-omen-800/80 hover:border-omen-400 hover:text-white flex items-center justify-center text-dark-300 transition-all hover:scale-105"
             >
               <Mail className="w-4 h-4" />
             </a>
@@ -82,17 +82,17 @@ export const Footer: React.FC = () => {
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-dark-900 hover:bg-dark-850 text-zinc-400 hover:text-white border border-dark-750 hover:border-zinc-600 text-xs font-mono tracking-wider uppercase transition-all"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-dark-900 hover:bg-dark-850 text-omen-300 hover:text-white border border-omen-800 hover:border-omen-500 text-xs font-mono tracking-wider uppercase transition-all"
         >
           <span>Voltar ao topo</span>
           <ArrowUp className="w-3.5 h-3.5" />
         </button>
 
-        {/* Legal & Copyright */}
-        <div className="pt-6 border-t border-dark-750/70 w-full flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-400 gap-2">
-          <span>© 2026 — Todos os direitos reservados.</span>
-          <span className="text-[11px] text-zinc-400">
-            [DARK MINIMAL DESIGN // INSPIRED BY TOJI ATMOSPHERE]
+        {/* Legal & Copyright (Texto do Toji removido conforme solicitado) */}
+        <div className="pt-6 border-t border-omen-900/60 w-full flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-dark-300 gap-2">
+          <span>© 2026 VORTEX — Todos os direitos reservados.</span>
+          <span className="text-[11px] text-omen-400">
+            [STREAMER & VIDEO EDITOR // VALORANT]
           </span>
         </div>
       </div>

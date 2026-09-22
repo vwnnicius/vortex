@@ -1,9 +1,8 @@
 /**
  * =========================================================================
- * REDES SOCIAIS E LINKS ("ONDE ME ENCONTRAR")
+ * REDES SOCIAIS E LINKS OFICIAIS DO VORTEX
  * =========================================================================
- * Altere apenas os links abaixo colocando as suas URLs reais.
- * Se quiser desativar alguma rede temporariamente, basta deixar a URL vazia ("").
+ * Todos os links oficiais de onde encontrar o VortexYVP na internet.
  */
 
 export interface SocialLinks {
@@ -13,7 +12,7 @@ export interface SocialLinks {
   instagram: string;
   x: string;
   livepix: string;
-  discord?: string;
+  discord: string;
 }
 
 export interface SocialItem {
@@ -25,43 +24,25 @@ export interface SocialItem {
   iconName: string;
   badge?: string;
   primaryActionText: string;
+  isCopyable?: boolean;
 }
 
-// =========================================================================
-// COLE SEUS LINKS AQUI:
-// =========================================================================
 export const socials: SocialLinks = {
-  // Seu canal do YouTube (ex: "https://youtube.com/@vortex")
-  youtube: "https://youtube.com/@SEU_CANAL",
-
-  // Seu perfil do TikTok (ex: "https://tiktok.com/@vortex")
-  tiktok: "https://tiktok.com/@SEU_TIKTOK",
-
-  // Seu canal da Twitch (ex: "https://twitch.tv/vortex")
-  twitch: "https://twitch.tv/SEU_CANAL",
-
-  // Seu perfil do Instagram (ex: "https://instagram.com/vortex")
-  instagram: "https://instagram.com/SEU_INSTAGRAM",
-
-  // Seu perfil do X / Twitter (ex: "https://x.com/vortex")
-  x: "https://x.com/SEU_X",
-
-  // Seu link de doação LivePix (ex: "https://livepix.gg/vortex")
-  livepix: "https://livepix.gg/SEU_LIVEPIX",
-
-  // Seu servidor do Discord (opcional)
-  discord: "https://discord.gg/SEU_SERVIDOR",
+  youtube: "https://www.youtube.com/@VortexYVP",
+  tiktok: "https://www.tiktok.com/@vortexyvp",
+  twitch: "https://www.twitch.tv/vortexyvp",
+  instagram: "https://www.instagram.com/vortexyvp",
+  x: "https://x.com/Vortexyvp",
+  livepix: "https://livepix.gg/vortexyvp",
+  discord: "@vortexyvp",
 };
 
-/**
- * Metadados detalhados para exibição visual dos botões e cards de redes
- */
 export const socialItems: SocialItem[] = [
   {
     id: "twitch",
     name: "Twitch",
-    username: "@vortex",
-    description: "Transmissões ao vivo quase diárias com gameplay e resenha",
+    username: "@vortexyvp",
+    description: "Transmissões ao vivo com gameplay de Valorant (Main Omen) e resenha",
     url: socials.twitch,
     iconName: "Twitch",
     badge: "AO VIVO",
@@ -70,28 +51,39 @@ export const socialItems: SocialItem[] = [
   {
     id: "youtube",
     name: "YouTube",
-    username: "@vortex",
-    description: "Montagens em 4K 60FPS, vlogs e vídeos completos",
+    username: "@VortexYVP",
+    description: "Montagens de Valorant com After Effects, sound design avançado e cuts",
     url: socials.youtube,
     iconName: "Youtube",
-    badge: "4K EDITS",
+    badge: "MONTAGENS",
     primaryActionText: "Inscrever-se",
   },
   {
     id: "tiktok",
     name: "TikTok",
-    username: "@vortex",
-    description: "Cortes rápidos, melhores momentos e highlights de clutch",
+    username: "@vortexyvp",
+    description: "Clips rápidos, clutchs de Omen e highlights de jogadas",
     url: socials.tiktok,
     iconName: "Video",
     badge: "HIGHLIGHTS",
     primaryActionText: "Seguir no TikTok",
   },
   {
+    id: "discord",
+    name: "Discord",
+    username: "@vortexyvp",
+    description: "Fale comigo diretamente no Discord para encomendas de edits e trocas de ideia",
+    url: "#",
+    iconName: "MessageSquare",
+    badge: "DIRETO",
+    primaryActionText: "Copiar Tag",
+    isCopyable: true,
+  },
+  {
     id: "instagram",
     name: "Instagram",
-    username: "@vortex",
-    description: "Bastidores, setups, avisos de live e rotina criativa",
+    username: "@vortexyvp",
+    description: "Bastidores, setups, rotina de edição e avisos de stream",
     url: socials.instagram,
     iconName: "Instagram",
     primaryActionText: "Ver Stories",
@@ -99,8 +91,8 @@ export const socialItems: SocialItem[] = [
   {
     id: "x",
     name: "X (Twitter)",
-    username: "@vortex",
-    description: "Opiniões rápidas, avisos de vídeos e interação diária",
+    username: "@Vortexyvp",
+    description: "Avisos de novas montagens, pensamentos e interação com a comunidade",
     url: socials.x,
     iconName: "Twitter",
     primaryActionText: "Seguir no X",
@@ -109,10 +101,10 @@ export const socialItems: SocialItem[] = [
     id: "livepix",
     name: "LivePix",
     username: "Apoio Direto",
-    description: "Apoie o canal com mensagens e alertas em tempo real na live",
+    description: "Apoie o canal e a produção de novas montagens com alertas em live",
     url: socials.livepix,
     iconName: "Zap",
     badge: "APOIAR",
-    primaryActionText: "Fazer um Pix",
+    primaryActionText: "Mandar um Pix",
   },
 ];

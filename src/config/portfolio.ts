@@ -2,23 +2,13 @@
  * =========================================================================
  * PORTFÓLIO / GALERIA DE PROJETOS
  * =========================================================================
- * Para adicionar um novo projeto à galeria, basta duplicar um bloco e
- * preencher com as informações do seu novo trabalho:
- *
- * {
- *   id: "novo-projeto",
- *   title: "TÍTULO DO PROJETO",
- *   category: "Video Editing" | "Motion Design" | "Stream Design" | "Graphic Design",
- *   image: "URL_DA_IMAGEM",
- *   description: "Breve explicação do que foi feito.",
- *   link: "https://...",
- *   year: "2026",
- *   tags: ["Tag 1", "Tag 2"],
- * }
+ * Foco ativo em Valorant Montage e Video Editing.
+ * As categorias de Motion, Stream e Graphic estão marcadas como "Em Breve".
  */
 
 export type PortfolioCategory =
   | "Todos"
+  | "Valorant Montage"
   | "Video Editing"
   | "Motion Design"
   | "Stream Design"
@@ -27,9 +17,10 @@ export type PortfolioCategory =
 export interface ProjectItem {
   id: string;
   title: string;
-  category: "Video Editing" | "Motion Design" | "Stream Design" | "Graphic Design";
+  category: "Valorant Montage" | "Video Editing" | "Motion Design" | "Stream Design" | "Graphic Design";
   image: string;
   description: string;
+  status: 'active' | 'coming_soon';
   link?: string;
   year?: string;
   tags: string[];
@@ -37,6 +28,7 @@ export interface ProjectItem {
 
 export const portfolioCategories: PortfolioCategory[] = [
   "Todos",
+  "Valorant Montage",
   "Video Editing",
   "Motion Design",
   "Stream Design",
@@ -45,63 +37,66 @@ export const portfolioCategories: PortfolioCategory[] = [
 
 export const portfolioProjects: ProjectItem[] = [
   {
-    id: "valorant-shadows",
-    title: "Shadows // Valorant Montage",
-    category: "Video Editing",
+    id: "omen-phantom-montage",
+    title: "Phantom Strike // Valorant Montage",
+    category: "Valorant Montage",
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop",
-    description: "Montagem de precisão com sincronia de beat perfeita, sound design de armas aprimorado e transições de câmera fluidas.",
-    link: "https://youtube.com",
+    description: "Montagem de clutches e jogadas rápidas de Omen com sincronização cirúrgica no After Effects e Sound Design de armas detalhado.",
+    status: "active",
+    link: "https://www.youtube.com/@VortexYVP",
     year: "2026",
-    tags: ["Montage", "Sound Design", "After Effects"],
+    tags: ["Valorant", "After Effects", "Sound Design", "Beat Sync"],
   },
   {
-    id: "kinetic-identity",
-    title: "Kinetic Dark Stinger",
-    category: "Motion Design",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
-    description: "Transição stinger com lâminas cortantes, fumaça escura e partículas em alta velocidade para transmissões ao vivo.",
-    link: "https://youtube.com",
-    year: "2026",
-    tags: ["Stinger", "Motion 3D", "Cinematic"],
-  },
-  {
-    id: "tactical-stream-overlay",
-    title: "Tactical HUD Stream Package",
-    category: "Stream Design",
+    id: "shrouded-step-edit",
+    title: "Shrouded Step // Gameplay Sync",
+    category: "Valorant Montage",
     image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000&auto=format&fit=crop",
-    description: "Pacote completo de overlay minimalista inspirado em interfaces táticas militares. Telas de pausa, início e moldura de webcam.",
-    link: "https://twitch.tv",
+    description: "Edição com transições suaves de teleporte, correção de cor com atmosfera fria e mixagem pesada de graves.",
+    status: "active",
+    link: "https://www.youtube.com/@VortexYVP",
     year: "2026",
-    tags: ["Twitch Overlay", "OBS Setup", "Minimalist"],
+    tags: ["Omen Teleport", "After Effects", "Velocity", "Sound FX"],
   },
   {
-    id: "ranked-thumb-pack",
-    title: "High-CTR Ranked Thumbnails",
-    category: "Graphic Design",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-    description: "Conjunto de capas para YouTube com alto contraste, recorte de personagens limpo e tipografia impactante.",
-    link: "https://instagram.com",
-    year: "2026",
-    tags: ["Thumbnails", "CTR Booster", "Photoshop"],
-  },
-  {
-    id: "cs2-clutch-edit",
-    title: "Relentless // CS2 Cinematic",
+    id: "competitive-highlights",
+    title: "Apex Rounds // Valorant Highlights",
     category: "Video Editing",
     image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1000&auto=format&fit=crop",
-    description: "Edição de jogadas históricas com correção de cor monocromática e mixagem pesada de graves.",
-    link: "https://youtube.com",
+    description: "Compilação dinâmica de melhores momentos ranqueados, cortes rápidos e retenção máxima para redes sociais.",
+    status: "active",
+    link: "https://www.tiktok.com/@vortexyvp",
     year: "2026",
-    tags: ["CS2", "Velocity Sync", "Color Grade"],
+    tags: ["TikTok Clips", "Shorts", "Highlights", "Fast Cuts"],
   },
   {
-    id: "sub-badges-vector",
-    title: "Viper Blade Sub Badges",
+    id: "motion-preview-item",
+    title: "Pacote de Transições Stinger",
+    category: "Motion Design",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+    description: "Transições e elementos gráficos em movimento para transmissões e vídeos.",
+    status: "coming_soon",
+    year: "2026",
+    tags: ["Em Breve", "Motion 3D", "After Effects"],
+  },
+  {
+    id: "stream-preview-item",
+    title: "Overlay Tático Omen OBS",
+    category: "Stream Design",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+    description: "Conjunto de telas de início, pausa e molduras para stream de Valorant.",
+    status: "coming_soon",
+    year: "2026",
+    tags: ["Em Breve", "OBS Setup", "Overlay"],
+  },
+  {
+    id: "design-preview-item",
+    title: "Pack de Thumbnails Ilustradas",
     category: "Graphic Design",
     image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1000&auto=format&fit=crop",
-    description: "Emblemas vetoriais de assinatura e subscrição para chat da Twitch, desenhados para legibilidade em dimensões mínimas.",
-    link: "https://twitch.tv",
+    description: "Capas personalizadas de alto contraste para vídeos de Valorant.",
+    status: "coming_soon",
     year: "2026",
-    tags: ["Badges", "Vector Art", "Illustrator"],
+    tags: ["Em Breve", "Thumbnails", "Photoshop"],
   },
 ];

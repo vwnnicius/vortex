@@ -8,25 +8,25 @@
   }
 
   body {
-    background-color: #050505;
-    color: #e5e5e5;
+    background-color: #07070A;
+    color: #ede9fe;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
-  /* Custom dark scrollbar */
+  /* Custom dark scrollbar with subtle purple accent */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #050505;
+    background: #07070A;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1f1f1f;
+    background: #231E38;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #333333;
+    background: #5B21B6;
   }
 }
 
@@ -42,27 +42,29 @@
   }
 }
 
-/* Efeito sutil de linhas cinematográficas e textura escura */
-.cinema-noise {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
-  background-size: 24px 24px;
+/* Glassmorphism Dark com tema Omen */
+.glass-panel-omen {
+  background: rgba(13, 11, 20, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
 }
 
-/* Borda com iluminação sutil (estilo lâmina de aço Toji) */
-.border-steel-subtle {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Glass Blur para seções "Em Breve" */
+.glass-blur-lock {
+  background: rgba(11, 8, 23, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+/* Borda com iluminação sutil de fenda sombria do Omen */
+.border-omen-subtle {
+  border: 1px solid rgba(139, 92, 246, 0.18);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.border-steel-subtle:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 0 20px -5px rgba(255, 255, 255, 0.06);
-}
-
-/* Glassmorphism Dark Minimal */
-.glass-panel-dark {
-  background: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.border-omen-subtle:hover {
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.25);
 }

@@ -2,8 +2,8 @@
  * =========================================================================
  * MEUS TRABALHOS / SERVIÇOS
  * =========================================================================
- * Apresentação dos 4 pilares de especialidade profissional.
- * Mantenha o tom sóbrio e profissional sem parecer um infoproduto agressivo.
+ * Video Editing é a especialidade ativa com foco em Valorant.
+ * Motion, Stream Design e Graphic Design são marcados como "Em Breve" com glass blur.
  */
 
 export interface ServiceItem {
@@ -11,6 +11,7 @@ export interface ServiceItem {
   title: string;
   subtitle: string;
   description: string;
+  status: 'active' | 'coming_soon';
   deliverables: string[];
   tools: string[];
   featuredTag?: string;
@@ -20,54 +21,55 @@ export const services: ServiceItem[] = [
   {
     id: "video-editing",
     title: "Video Editing",
-    subtitle: "RITMO & NARRATIVA",
-    description: "Montagens, cortes e vídeos com foco em ritmo, impacto e narrativa visual. Sincronia de áudio cirúrgica para prender a atenção do primeiro ao último segundo.",
+    subtitle: "ESPECIALIDADE ATIVA",
+    description: "Montagens cinematográficas de Valorant, cortes rápidos e vídeos com foco em impacto sonoro e ritmo. Edições construídas no After Effects com sincronização precisa de beats e sound design imersivo.",
+    status: "active",
     deliverables: [
-      "Montagens de gameplay e highlights",
-      "Edição dinâmica para YouTube e TikTok",
-      "Sound design imersivo e mixagem",
-      "Color grading cinematográfico",
+      "Montagens de gameplay de Valorant (Clutches & Kills)",
+      "Sincronização milimétrica de ritmo e batida (Beat Sync)",
+      "Sound design detalhado (efeitos de armas, passos e habilidades)",
+      "Edições dinâmicas para YouTube, TikTok e Reels",
     ],
-    tools: ["Premiere Pro", "After Effects", "Reaper"],
-    featuredTag: "PRINCIPAL",
+    tools: ["After Effects", "Premiere Pro", "Sound Design"],
+    featuredTag: "DISPONÍVEL AGORA",
   },
   {
     id: "motion-design",
     title: "Motion Design",
-    subtitle: "IDENTIDADE EM MOVIMENTO",
-    description: "Animações, transições, elementos gráficos e identidade em movimento. Tipografia cinética e efeitos de pós-produção que elevam o padrão de qualquer produção.",
+    subtitle: "EXPANSÃO FUTURA",
+    description: "Animações, transições personalizadas e tipografia cinética. Em desenvolvimento para novos pacotes visuais.",
+    status: "coming_soon",
     deliverables: [
       "Transições personalizadas e stinger",
       "Intros e vinhetas cinematográficas",
-      "Lower thirds e títulos animados",
-      "VFX táticos e partículas sutis",
+      "Lower thirds animados",
     ],
-    tools: ["After Effects", "Cinema 4D", "Blender"],
+    tools: ["After Effects", "Blender"],
   },
   {
     id: "stream-design",
     title: "Stream Design",
-    subtitle: "ECOSSISTEMA DE TRANSMISSÃO",
-    description: "Overlays, alerts, telas, transições e identidade visual para streamers. Tudo estruturado para OBS Studio com leveza máxima e acabamento de alta linhagem.",
+    subtitle: "EXPANSÃO FUTURA",
+    description: "Overlays, alertas e identidade visual para streamers. Pacote em preparação para futuras encomendas.",
+    status: "coming_soon",
     deliverables: [
-      "Telas de início, pausa, fim e Just Chatting",
-      "Overlays de câmera e alertas animados",
-      "Painéis para Twitch e badges personalizadas",
-      "Setup otimizado sem perda de FPS no jogo",
+      "Telas de início, pausa e encerramento",
+      "Overlays de webcam e layout tático",
+      "Painéis e badges para Twitch",
     ],
-    tools: ["OBS Studio", "Photoshop", "After Effects"],
+    tools: ["OBS Studio", "Photoshop"],
   },
   {
     id: "graphic-design",
     title: "Graphic Design",
-    subtitle: "DIREÇÃO DE ARTE & PEÇAS VISUAIS",
-    description: "Artes, thumbnails, posts e peças visuais. Criação de thumbnails com alto CTR para YouTube e peças estáticas com contraste marcante e tipografia expressiva.",
+    subtitle: "EXPANSÃO FUTURA",
+    description: "Thumbnails, banners e peças visuais para criadores de conteúdo.",
+    status: "coming_soon",
     deliverables: [
-      "Thumbnails de alto clique para YouTube",
+      "Thumbnails ilustradas e tratadas",
       "Banners para Twitter/X, Twitch e YouTube",
-      "Identidade de marca e logotipos",
-      "Cards de anúncios e capas de projetos",
+      "Identidade visual estática",
     ],
-    tools: ["Photoshop", "Illustrator", "Figma"],
+    tools: ["Photoshop", "Illustrator"],
   },
 ];
